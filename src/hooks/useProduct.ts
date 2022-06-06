@@ -39,14 +39,14 @@ export const useProduct = ({
   }
 
   useEffect(() => {
-    isMounted.current = true;
-  },[])
-
-  useEffect(() => {
     if(!isMounted.current) return
 
     setCounter(value);
   }, [value]);
+
+  useEffect(() => {
+    isMounted.current = true;
+  },[])
 
   return {
     counter,
